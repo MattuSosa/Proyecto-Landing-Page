@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page de Suscripción</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="encabezado">
+        <h1 class="titulo">Suscripción al Boletín</h1>
+    </header>
+    
+    <main>
+        <section class="contenido-derecha">
+            <form id="formulario" class="formulario-bloque">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+        
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" placeholder="Tu apellido" required>
+        
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" placeholder="Tu correo electrónico" required>
+        
+                <label for="telefono">Número de teléfono:</label>
+                <input type="tel" id="telefono" placeholder="Tu número de teléfono" required>
+        
+                <a href="#" onclick="enviarWhatsApp()" class="whatsapp-link">Enviar a WhatsApp</a>
+            </form>
+        </section>
+    </main>
+    
+    <script>
+        function enviarWhatsApp() {
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+
+            const mensaje = `Bienvenido ${nombre} ${apellido} a nuestro boletín. Tu correo es ${email} y tu teléfono es ${telefono}.`;
+            const enlaceWhatsApp = `https://wa.me/5492974334930?text=${encodeURIComponent(mensaje)}`;
+
+            window.open(enlaceWhatsApp, '_blank');
+        }
+    </script>
+</body>
+</html>

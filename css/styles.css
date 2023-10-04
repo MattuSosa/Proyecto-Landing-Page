@@ -1,0 +1,108 @@
+
+.encabezado {
+    background-image: url(/html/images/chica_cesped.jpg);
+    background-size: contain;
+    background-position: center top;
+    text-align: center;
+    padding: 400px 0;
+    color: #fff;
+    background-repeat: no-repeat;
+}
+.titulo {
+    font-size: 150px;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+}
+body {
+    background-color: #CC89AA;
+    font-family: 'Great Vibes', cursive;
+    color: #333;
+}
+.formulario-bloque {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    font-size: 40px;
+    margin-top: -150px;
+}
+.formulario-bloque input[type="text"],
+.formulario-bloque input[type="email"],
+.formulario-bloque input[type="tel"] {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.formulario-bloque a.whatsapp-link {
+    background-color: #25d366;
+    color: #fff;
+    padding: 15px 45px;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    font-family: 'Great Vibes', cursive;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.formulario-bloque a.whatsapp-link {
+    max-width: 300px;
+}
+.formulario-bloque a.whatsapp-link {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Media query para dispositivos móviles en modo retrato */
+@media (max-width: 1025px) and (orientation: portrait) {
+
+    .formulario-bloque {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .contenido-derecha,
+    .contenido-izquierda,
+    .formulario-bloque {
+        text-align: center;
+        float: none;
+        width: 100%;
+    }
+    .formulario-bloque input[type="text"],
+    .formulario-bloque input[type="email"],
+    .formulario-bloque input[type="tel"],
+    .formulario-bloque button[type="submit"] {
+        width: 100%;
+        margin-right: 0;
+    }
+    .encabezado {
+        background-size: cover;
+        padding: 170px 0;
+    }
+
+    .titulo {
+        font-size: 70px;
+        margin-top: 10px;
+    }
+}
+
+/* Media query para dispositivos móviles en modo paisaje */
+@media (max-width: 1080px) and (orientation: landscape) {
+    .encabezado {
+        padding: 400px 0;
+    }
+
+    .titulo {
+        font-size: 60px;
+        margin-top: -200px;
+    }
+
+    .formulario-bloque {
+        width: 100%;
+        margin-top: 35px;
+    }
+}
